@@ -1,6 +1,9 @@
+local function is_windows()
+	return package.config:sub(1, 1) == "\\"
+end
+
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
-local shell_path = "C:/Users/leonardo.bevilacqua/AppData/Local/Programs/Git/bin/bash.exe"
 
 config.color_scheme = "OneDark (base16)"
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
@@ -14,9 +17,12 @@ config.window_padding = {
 	bottom = 0,
 }
 
-config.default_prog = { shell_path, "-l" }
-config.set_environment_variables = {
-	SHELL = shell_path,
-}
+if is_windows() then
+	local shell_path = "C:/Users/leonardo.bevilacqua/AppData/Local/Programs/Git/bin/bash.exe"
+	config.default_prog = { shell_path, "-l" }
+	config.set_environment_variables = {
+		SHELL = shell_path,
+	}
+end
 
 return config
