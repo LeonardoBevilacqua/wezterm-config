@@ -19,6 +19,8 @@ end
 -- shared modules
 local appearance = require("appearance")
 appearance.apply_to_config(wezterm, config)
+local keybinds = require("keybinds")
+keybinds.apply_to_config(wezterm, config)
 
 apply_platform_config()
 
