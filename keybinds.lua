@@ -11,12 +11,12 @@ end
 local function panel_split(wezterm)
 	return {
 		{
-			key = "h",
+			key = "v",
 			mods = "CTRL|SHIFT|ALT",
 			action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 		},
 		{
-			key = "v",
+			key = "h",
 			mods = "CTRL|SHIFT|ALT",
 			action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 		},
@@ -27,22 +27,22 @@ local function panel_navigation(wezterm)
 	return {
 		{
 			key = "h",
-			mods = "SHIFT",
+			mods = "ALT",
 			action = wezterm.action.ActivatePaneDirection("Left"),
 		},
 		{
 			key = "l",
-			mods = "SHIFT",
+			mods = "ALT",
 			action = wezterm.action.ActivatePaneDirection("Right"),
 		},
 		{
 			key = "k",
-			mods = "SHIFT",
+			mods = "ALT",
 			action = wezterm.action.ActivatePaneDirection("Up"),
 		},
 		{
 			key = "j",
-			mods = "SHIFT",
+			mods = "ALT",
 			action = wezterm.action.ActivatePaneDirection("Down"),
 		},
 	}
