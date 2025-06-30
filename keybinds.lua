@@ -27,22 +27,22 @@ local function panel_navigation(wezterm)
 	return {
 		{
 			key = "h",
-			mods = "ALT",
+			mods = "SHIFT|ALT",
 			action = wezterm.action.ActivatePaneDirection("Left"),
 		},
 		{
 			key = "l",
-			mods = "ALT",
+			mods = "SHIFT|ALT",
 			action = wezterm.action.ActivatePaneDirection("Right"),
 		},
 		{
 			key = "k",
-			mods = "ALT",
+			mods = "SHIFT|ALT",
 			action = wezterm.action.ActivatePaneDirection("Up"),
 		},
 		{
 			key = "j",
-			mods = "ALT",
+			mods = "SHIFT|ALT",
 			action = wezterm.action.ActivatePaneDirection("Down"),
 		},
 	}
