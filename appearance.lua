@@ -5,7 +5,7 @@ function M.apply_to_config(wezterm, config)
 	config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 	config.window_decorations = "RESIZE"
 	config.hide_tab_bar_if_only_one_tab = false
-	config.window_background_opacity = 0.9
+	config.window_background_opacity = 0.95
 	config.window_padding = {
 		left = 0,
 		right = 0,
